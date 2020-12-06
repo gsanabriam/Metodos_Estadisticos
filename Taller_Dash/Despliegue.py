@@ -44,7 +44,7 @@ app.layout = html.Div(
 def update_output(f):
     if(f==1):
         fig = px.imshow(io.imread('https://github.com/gsanabriam/Metodos_Estadisticos/blob/main/Imagen_alentado.png?raw=true'))
-    return fig
+        return fig
 
 
 
