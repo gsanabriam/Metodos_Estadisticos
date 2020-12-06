@@ -11,6 +11,8 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output, State
 import dash_bootstrap_components as dbc
+
+
 #Selecciona Modelo
 Modelo=['Árbol Desición','Random Forest','Regresión Lógistica']
 app = dash.Dash()
@@ -41,9 +43,8 @@ app.layout = html.Div(
 )
 def update_output(f):
     if(f==1):
-        fig = px.imshow(io.imread('Imagen_enfermo.png'), binary_backend="png")
+        fig = px.imshow(io.imread('Imagen_enfermo.png'))
     return fig
-
 
 
 
