@@ -23,9 +23,10 @@ import dash_html_components as html
 from dash.dependencies import Input, Output, State
 import dash_bootstrap_components as dbc
 
-#Selecciona Modelo
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 Modelo=['Árbol Desición','Random Forest','Regresión Lógistica']
-app = dash.Dash()
+
+app = dash.Dash(external_stylesheets=external_stylesheets)
 
 app.layout = html.Div(
     [
@@ -175,17 +176,17 @@ def update_output(input1, input2,input3, input4,input5,input6,input7,input8,inpu
                     'time':[input12]
 
                    })
-    Ar='https://github.com/gsanabriam/Metodos_Estadisticos/blob/main/ModelAbrol.sav?raw=true'
+    
     #Definición del modelo
     if(Model!=None):
         if(Model=='Árbol Desición'):
-            filename = Ar
+            filename = 'ModelAbrol.sav'
             Etiqueta='Resultado Árbol'
         elif (Model=='Random Forest'):
-            filename= 'https://github.com/gsanabriam/Metodos_Estadisticos/blob/main/ModelRF.sav?raw=true'   
+            filename= 'ModelRF.sav'   
             Etiqueta='Resultado Random forest'
         else:
-            filename= 'https://github.com/gsanabriam/Metodos_Estadisticos/blob/main/ModelRL.sav?raw=true'
+            filename= 'ModelRL.sav'
             Etiqueta='Resultado Regresión lógistica'
 
         
@@ -219,7 +220,6 @@ def update_output(input1, input2,input3, input4,input5,input6,input7,input8,inpu
     
     
     return fig, fig2, Etiqueta, Etiqueta2
-
 
 
 if __name__ == '__main__':
