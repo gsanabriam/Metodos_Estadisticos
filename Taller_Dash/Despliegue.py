@@ -175,17 +175,17 @@ def update_output(input1, input2,input3, input4,input5,input6,input7,input8,inpu
                     'time':[input12]
 
                    })
-    Ar='ModelAbrol.sav'
+    Ar='https://github.com/gsanabriam/Metodos_Estadisticos/blob/main/ModelAbrol.sav?raw=true'
     #Definición del modelo
     if(Model!=None):
         if(Model=='Árbol Desición'):
             filename = Ar
             Etiqueta='Resultado Árbol'
         elif (Model=='Random Forest'):
-            filename= 'ModelRF.sav'   
+            filename= 'https://github.com/gsanabriam/Metodos_Estadisticos/blob/main/ModelRF.sav?raw=true'   
             Etiqueta='Resultado Random forest'
         else:
-            filename= 'ModelRL.sav'
+            filename= 'https://github.com/gsanabriam/Metodos_Estadisticos/blob/main/ModelRL.sav?raw=true'
             Etiqueta='Resultado Regresión lógistica'
 
         
